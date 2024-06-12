@@ -64,7 +64,7 @@ export default function Page3_Desktop() {
             <div className="mx-auto row-end-12 row-span-2 self-end">
               <button
                 type="button"
-                className="block text-white font-medium text-[calc(100vw/375*8.31)] rounded-5.2px bg-#5463FF w-[calc(100vw/375*205)] px-[calc(100vw/375*12)] py-[calc(100vw/375*10)]"
+                className="block text-white font-medium text-[calc(100vw/375*8.31)] rounded-5.2px bg-#5463FF w-[calc(100vw/375*205)] px-[calc(100vw/375*12)] py-[calc(100vw/375*10)] hover:scale-120"
               >
                 Contact Us Now
               </button>
@@ -98,7 +98,7 @@ export default function Page3_Desktop() {
             </div>
             <div className="">
               <Image
-                src="/3-@2-hero-image.png"
+                src="/3-hero-image.png"
                 alt="Page3 Hero Image"
                 width={0}
                 height={0}
@@ -157,7 +157,8 @@ export default function Page3_Desktop() {
           >
             {/* <div className="hero-image col-span-6 row-span-9 row-end-12 col-end-13 -my-15 -mx-5"> */}
             <Image
-              src="/3-hero-image.png"
+              // src="/3-hero-image.png"
+              src="https://selfuse-1308651335.cos.ap-nanjing.myqcloud.com/3-hero-Image.png"
               alt="Page3 Hero Image"
               width={0}
               height={0}
