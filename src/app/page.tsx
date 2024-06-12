@@ -157,7 +157,7 @@ export default function Page3_Desktop() {
           >
             {/* <div className="hero-image col-span-6 row-span-9 row-end-12 col-end-13 -my-15 -mx-5"> */}
             <Image
-              src="/3-@2-hero-image.png"
+              src="/3-hero-image.png"
               alt="Page3 Hero Image"
               width={0}
               height={0}
