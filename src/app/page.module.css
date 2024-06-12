@@ -1,15 +1,19 @@
-.mobile-grid-layout {
+/* .mobile-grid-layout {
   grid-area: "";
-}
+} */
 
-/*.main {
+/* 
+PS: Test Typescript CSS modules support.
+
+.main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-}
+} */
+/* 
 
 .description {
   display: inherit;
