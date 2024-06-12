@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "lint-staged": {
-      "*": "prettier --write ."
-    }
+    "commit": "cz"
+  },
+  "lint-staged": {
+    "*": "prettier --write ."
   },
   "dependencies": {
     "gsap": "^3.12.5",
