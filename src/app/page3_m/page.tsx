@@ -6,8 +6,8 @@ export default function Page3_Mobile() {
   const discountPercent = 15;
   const growthPercent = 50;
   return (
-    <div className="hero-container h-screen p-20px">
-      <header className="flex items-center justify-between h-max mb-10">
+    <div className="hero-container p-20px h-screen">
+      <header className="mb-10 flex h-max items-center justify-between">
         <div className="logo">
           <Image
             src="/3-logo.svg"
@@ -15,7 +15,7 @@ export default function Page3_Mobile() {
             width={0}
             height={0}
             sizes="min"
-            className="w-min h-min"
+            className="h-min w-min"
           />
         </div>
         <div className="menu">
@@ -25,23 +25,23 @@ export default function Page3_Mobile() {
             width={0}
             height={0}
             sizes="min"
-            className="w-min h-min"
+            className="h-min w-min"
           />
         </div>
       </header>
       <main className="main px-20px">
-        <p className="font-light leading-20.9px text-13px">Yes. I want to do</p>
-        <h2 className="font-bold leading-47px text-39.2px text-#5463FF mb-2 text-nowrap">
+        <p className="leading-20.9px text-13px font-light">Yes. I want to do</p>
+        <h2 className="leading-47px text-39.2px text-#5463FF mb-2 text-nowrap font-bold">
           UIUX DESIGNER
         </h2>
-        <p className="font-light text-9.58px text-center mb-3">
+        <p className="text-9.58px mb-3 text-center font-light">
           Lorem ipsum dolor sit am consectetur. Urna enim quis mi metus ipsum.
           Ullam congue in viverra congue ornare.Morbi non tincidunt velit nec.
         </p>
         <div className="grid place-content-center">
           <button
             type="button"
-            className=" bg-#5463FF text-white rounded-5.2px mb-5 p-8px box-border text-10px"
+            className="bg-#5463FF rounded-5.2px p-8px text-10px mb-5 box-border text-white"
           >
             Contact Us Now
           </button>
@@ -49,7 +49,7 @@ export default function Page3_Mobile() {
             <div>
               Upto
               <br />
-              <span className="font-bold text-#5463FF text-16px">
+              <span className="text-#5463FF text-16px font-bold">
                 {discountPercent}%
               </span>
               <br />
@@ -58,7 +58,7 @@ export default function Page3_Mobile() {
             <div>
               Upto
               <br />
-              <span className="font-bold text-#5463FF text-16px">
+              <span className="text-#5463FF text-16px font-bold">
                 {growthPercent}%
               </span>
               <br />
@@ -67,7 +67,7 @@ export default function Page3_Mobile() {
           </div>
         </div>
       </main>
-      <div className="hero-image flex items-center justify-center mt-7">
+      <div className="hero-image mt-7 flex items-center justify-center">
         {/* <div className="grow">123</div> */}
         <Image
           src="/3-@2-hero-image.png"
@@ -75,7 +75,7 @@ export default function Page3_Mobile() {
           width={0}
           height={0}
           sizes="max"
-          className="w-full h-auto"
+          className="h-auto w-full"
         />
       </div>
     </div>

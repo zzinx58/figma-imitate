@@ -23,10 +23,10 @@ export default function Page3_Desktop() {
   const isMobile = false;
   if (isMobile) {
     return (
-      <div className="`mobile-container w-screen h-screen p-[calc(100vw/375*20)] box-border`">
-        <div className="w-full h-full grid  grid-rows-3 mx-auto">
-          <div className=" grid grid-rows-11">
-            <header className=" flex justify-between items-center">
+      <div className="`mobile-container box-border` h-screen w-screen p-[calc(100vw/375*20)]">
+        <div className="mx-auto grid h-full w-full grid-rows-3">
+          <div className="grid grid-rows-11">
+            <header className="flex items-center justify-between">
               <div className="logo">
                 <Image
                   src="/3-logo.svg"
@@ -34,7 +34,7 @@ export default function Page3_Desktop() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto"
+                  className="h-auto w-full"
                 />
               </div>
               <div className="menu">
@@ -44,27 +44,27 @@ export default function Page3_Desktop() {
                   width={31}
                   height={20}
                   sizes="100vw"
-                  className="w-full h-auto"
+                  className="h-auto w-full"
                 />
               </div>
             </header>
-            <main className=" row-start-4 ml-[calc(100vw/375*20)]">
-              <p className="font-light text-[calc(100vw/375*13.06)]">
+            <main className="row-start-4 ml-[calc(100vw/375*20)]">
+              <p className="text-[calc(100vw/375*13.06)] font-light">
                 Yes. I want to do
               </p>
-              <h2 className="text-#5463FF font-bold text-[calc(100vw/375*39.19)] text-nowrap">
+              <h2 className="text-#5463FF text-nowrap text-[calc(100vw/375*39.19)] font-bold">
                 UIUX DESIGNER
               </h2>
-              <p className="font-light text-[calc(100vw/375*9.58)] text-center text-pretty">
+              <p className="text-pretty text-center text-[calc(100vw/375*9.58)] font-light">
                 Lorem ipsum dolor sit am consectetur. Urna enim quis mi metus
                 ipsum. Ullam congue in viverra congue ornare.Morbi non tincidunt
                 velit nec.
               </p>
             </main>
-            <div className="mx-auto row-end-12 row-span-2 self-end">
+            <div className="row-span-2 row-end-12 mx-auto self-end">
               <button
                 type="button"
-                className="block text-white font-medium text-[calc(100vw/375*8.31)] rounded-5.2px bg-#5463FF w-[calc(100vw/375*205)] px-[calc(100vw/375*12)] py-[calc(100vw/375*10)] hover:scale-120"
+                className="rounded-5.2px bg-#5463FF hover:scale-120 block w-[calc(100vw/375*205)] px-[calc(100vw/375*12)] py-[calc(100vw/375*10)] text-[calc(100vw/375*8.31)] font-medium text-white"
               >
                 Contact Us Now
               </button>
@@ -72,11 +72,11 @@ export default function Page3_Desktop() {
           </div>
 
           <div className="flex flex-col">
-            <div className="flex gap-[calc(100vw/375*33)] mx-auto leading-4 mt-[calc(100vw/375*24)]">
+            <div className="mx-auto mt-[calc(100vw/375*24)] flex gap-[calc(100vw/375*33)] leading-4">
               <div>
                 <span className="text-[calc(100vw/375*9.21)]">Upto</span>
                 <br />
-                <span className="text-#5463FF font-bold text-[calc(100vw/375*18.42)] ">
+                <span className="text-#5463FF text-[calc(100vw/375*18.42)] font-bold">
                   {discountPercent}%
                 </span>
                 <br />
@@ -87,7 +87,7 @@ export default function Page3_Desktop() {
               <div>
                 <span className="text-[calc(100vw/375*9.21)]">Upto</span>
                 <br />
-                <span className="text-#5463FF font-bold text-[calc(100vw/375*18.42)]">
+                <span className="text-#5463FF text-[calc(100vw/375*18.42)] font-bold">
                   {growthPercent}%
                 </span>
                 <br />
@@ -103,7 +103,7 @@ export default function Page3_Desktop() {
                 width={0}
                 height={0}
                 sizes="max"
-                className="w-auto h-full"
+                className="h-full w-auto"
               />
             </div>
           </div>
@@ -113,48 +113,41 @@ export default function Page3_Desktop() {
   }
   if (!isMobile) {
     return (
-      <div className="desktop-container w-screen h-screen py-4.6vh px-8.3vw text-shadow">
-        <div className="w-full h-full grid grid-cols-12 grid-rows-12 gap-1.4vw mx-auto ">
-          <header className="col-span-full grid grid-cols-subgrid h-[calc(1.39*2.3vh)] leading-2.3vh ">
-            <div className="logo h-full col-start-1 col-span-3 hover:cursor-pointer">
+      <div className="desktop-container py-4.6vh px-8.3vw text-shadow h-screen w-screen">
+        <div className="gap-1.4vw mx-auto grid h-full w-full grid-cols-12 grid-rows-12">
+          <header className="leading-2.3vh col-span-full grid h-[calc(1.39*2.3vh)] grid-cols-subgrid">
+            <div className="logo col-span-3 col-start-1 h-full hover:cursor-pointer">
               <Image
                 src="/3-logo.svg"
                 alt="Page3 Logo"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-auto h-full"
+                className="h-full w-auto"
               />
             </div>
-            <div className="col-end-13 2xl:col-start-7 xl:col-start-6 lg:col-start-5 col-start-4 flex justify-between items-center">
-              <nav className="flex gap-2.8vw">
+            <div className="col-start-4 col-end-13 flex items-center justify-between lg:col-start-5 xl:col-start-6 2xl:col-start-7">
+              <nav className="gap-2.8vw flex">
                 {Page3NavItemsTextArr.map((item) => (
                   <a
                     href={item.linkUrl}
-                    className="font-semibold hover:text-#5463FF hover:cursor-pointer text-[calc(1.39*16px)]"
+                    className="hover:text-#5463FF text-[calc(1.39*16px)] font-semibold hover:cursor-pointer"
                   >
                     {item.text}
                   </a>
                 ))}
               </nav>
-              <div className="relative">
+              <div className="pointer-events-auto relative">
                 <button
                   type="button"
-                  className="bg-#5463FF text-white text-[calc(1.39*16px)] font-medium px-2.2vw py-1.4vh absolute rounded-10px lg:-right-10 -right-10 -translate-y-1/2  hover:scale-120 -z-10"
+                  className="bg-#5463FF px-2.2vw py-1.4vh rounded-10px hover:scale-120 absolute -right-10 -z-10 -translate-y-1/2 text-[calc(1.39*16px)] font-medium text-white lg:-right-10"
                 >
                   Button
                 </button>
               </div>
             </div>
           </header>
-          <div
-            className="
-            hero-image 
-            row-end-12 md:row-start-7 lg:row-start-5 xl:row-start-4 2xl:row-start-3 row-start-7
-            col-end-13 2xl:col-start-7 md:col-start-5
-            col-start-5
-            -my-15 -mx-5"
-          >
+          <div className="hero-image -my-15 col-start-5 col-end-13 row-start-7 row-end-12 -mx-5 md:col-start-5 md:row-start-7 lg:row-start-5 xl:row-start-4 2xl:col-start-7 2xl:row-start-3">
             {/* <div className="hero-image col-span-6 row-span-9 row-end-12 col-end-13 -my-15 -mx-5"> */}
             <Image
               // src="/3-hero-image.png"
@@ -163,17 +156,17 @@ export default function Page3_Desktop() {
               width={0}
               height={0}
               sizes="max"
-              className="w-auto h-full"
+              className="h-full w-auto"
             />
           </div>
           <main className="col-span-6 col-start-1 row-start-4 row-end-11 grid grid-rows-subgrid">
-            <p className="row-end-2 self-end leading-10 font-light text-[calc(1.39*24px)]">
+            <p className="row-end-2 self-end text-[calc(1.39*24px)] font-light leading-10">
               Yes, I want to do
             </p>
-            <h2 className="text-#5463FF row-start-2 leading-20 font-bold text-[calc(1.39*72px)] text-nowrap">
+            <h2 className="text-#5463FF leading-20 row-start-2 text-nowrap text-[calc(1.39*72px)] font-bold">
               UIUX DESIGNER
             </h2>
-            <p className="mt-3vh font-light text-[calc(1.39*18px)] leading-2.5vh text-pretty ">
+            <p className="mt-3vh leading-2.5vh text-pretty text-[calc(1.39*18px)] font-light">
               Lorem ipsum dolor sit am consectetur. Urna enim quis mi metus
               ipsum. Ullam congue in viverra congue ornare.Morbi non tincidunt
               <br />
@@ -182,16 +175,16 @@ export default function Page3_Desktop() {
             <div className="row-start-5">
               <button
                 type="button"
-                className="text-[calc(1.39*16px)] text-white bg-#5463FF font-medium rounded-10px px-2.2vw py-1.4vh hover:scale-120"
+                className="bg-#5463FF rounded-10px px-2.2vw py-1.4vh hover:scale-120 text-[calc(1.39*16px)] font-medium text-white"
               >
                 Contact Us Now
               </button>
             </div>
-            <div className="row-start-7 flex gap-3.5vw">
+            <div className="gap-3.5vw row-start-7 flex">
               <div>
                 <span className="text-[calc(1.39*16px)] leading-5">Upto</span>
                 <br />
-                <span className="text-#5463FF font-bold text-[calc(1.39*32px)] leading-10">
+                <span className="text-#5463FF text-[calc(1.39*32px)] font-bold leading-10">
                   {discountPercent}%
                 </span>
                 <br />
@@ -202,7 +195,7 @@ export default function Page3_Desktop() {
               <div>
                 <span className="text-[calc(1.39*16px)] leading-5">Upto</span>
                 <br />
-                <span className="text-#5463FF font-bold text-[calc(1.39*32px)] leading-10">
+                <span className="text-#5463FF text-[calc(1.39*32px)] font-bold leading-10">
                   {growthPercent}%
                 </span>
                 <br />

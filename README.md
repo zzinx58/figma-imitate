@@ -47,3 +47,36 @@ Page3 范例实现过程（问题）记录：
 - Next.js 提供的 Image 组件带来一定使用困扰，不便于大小自适应实现，寻找实践 workaround 花费一定时间。
 - 第一次模拟使用了栅格系统支持不友好的设计图，给实现带来一定困扰，个人设计实现负担较大，弃用，设计图良好的栅格定位较为重要。
 - 部分位置当时实现的样式 workaround 遗留导致的非预期样式错位问题关注。
+
+bonus:
+
+- https://unocss.dev/presets/attributify#typescript-support-jsx-tsx
+- https://www.tailwindcss.cn/docs/pointer-events#controlling-pointer-event-behavior
+- https://www.figma.com/design/NMLMGfy3KfGuDfqJqPJUaK/UIUX-Designer-hero-section---desktop-and-Mobile-(Community)?node-id=1-58&t=fP0wKsEl9FX0SRrO-0
+
+# 被提及的改进项：
+
+- 文件的组织目录
+- 命名规范
+- tailwind 书写规范
+- 多人协同格式化工具 pre commit 的配置
+- 注释
+
+## 改进思路
+
+- 文件组织目录方面
+  - 参考补全完整 next.js 项目目录结构
+  - 按完整目录结构对源代码中内容做拆分
+- 命名规范方面
+  - 针对 React 项目，在页面 moduleCSS 中采用类 BEM 规范命名元素样式
+  - 文件命名规范化？
+- TailwindCSS 书写规范？
+  - .prettierrc 文件应用 prettier-plugin-tailwindcss 插件，配置 tailwindcss prettier formatter?
+- pre commit 配置
+  - pre commit 是 Git hooks 最开头也是使用最多的钩子，其运行时机是在键入提交信息之前运行。该钩子可以用于检查代码风格是否一致与代码提交前测试。
+  - lint-stage?
+  - commitlint 约束提交信息，规范提交格式
+    - 使用 commit-msg Git 钩子
+- 注释方面
+  - 对各个单独部分组件是什么做注释
+  - 去掉注释吗？

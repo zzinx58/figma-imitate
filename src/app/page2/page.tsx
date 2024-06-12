@@ -4,13 +4,13 @@ import { Page2NavItemsTextArr } from "@/app/constants";
 
 export default function Page2() {
   return (
-    <div className="hero-container h-screen bg-#515DEF flex justify-between">
+    <div className="hero-container bg-#515DEF flex h-screen justify-between">
       {/*  */}
-      <div className="main-container w-full col-span-2">
-        <header className="header flex w-full h-120px items-center bg-red relative justify-center">
+      <div className="main-container col-span-2 w-full">
+        <header className="header h-120px bg-red relative flex w-full items-center justify-center">
           <button
             type="button"
-            className="absolute text-white text-18px bg-#515DEF p-8px top-1/3 -right-2/5"
+            className="text-18px bg-#515DEF p-8px -right-2/5 absolute top-1/3 text-white"
           >
             Contact Us
           </button>
@@ -18,7 +18,7 @@ export default function Page2() {
             <div className="logo">
               <Image src="/Livia.svg" width={92} height={54} alt="Livia Logo" />
             </div>
-            <nav className="nav text-white font-semibold text-18px flex gap-56px">
+            <nav className="nav text-18px gap-56px flex font-semibold text-white">
               {Page2NavItemsTextArr.map((item) => (
                 <a>{item.text}</a>
               ))}
@@ -26,9 +26,9 @@ export default function Page2() {
           </div>
         </header>
         {/*  */}
-        <main className="text-white w-full grid place-content-center items-center text-24px pt-42px">
+        <main className="text-24px pt-42px grid w-full place-content-center items-center text-white">
           <p className="mb-4">Hi, There!</p>
-          <h1 className="slogan text-64px font-bold mb-8">
+          <h1 className="slogan text-64px mb-8 font-bold">
             We are a growing-up
             <br />
             Creative Agency from
@@ -42,7 +42,7 @@ export default function Page2() {
           </p>
           <button
             type="button"
-            className="text-black bg-white h-80px w-300px flex items-center justify-center"
+            className="h-80px w-300px flex items-center justify-center bg-white text-black"
           >
             Let's Collaborate
             <span className="i-mdi:arrow-right size-48px" />

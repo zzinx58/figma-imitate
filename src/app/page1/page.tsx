@@ -10,7 +10,7 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
-        <p className="flex text-red font-bold text-24px">
+        <p className="text-red text-24px flex font-bold">
           Hello, here is zzx58.
         </p>
         <div>
