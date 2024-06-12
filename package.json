@@ -28,6 +28,7 @@
     "@types/react-dom": "^18",
     "@unocss/postcss": "^0.60.4",
     "autoprefixer": "^10.4.19",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "postcss": "^8.4.38",
@@ -36,5 +37,10 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5",
     "unocss": "^0.60.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
