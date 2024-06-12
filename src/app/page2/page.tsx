@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { navItemsTextArr } from "../constants";
+import { Page2NavItemsTextArr } from "@/app/constants";
 // https://www.figma.com/design/03nwrdmzwdECs70vyWFuvp/Heromaster---Free-collection-of-hero-section-(Community)?node-id=1-346&t=cqDwdR6hZ6RyVWDc-0
 
 export default function Page2() {
@@ -19,7 +19,7 @@ export default function Page2() {
               <Image src="/Livia.svg" width={92} height={54} alt="Livia Logo" />
             </div>
             <nav className="nav text-white font-semibold text-18px flex gap-56px">
-              {navItemsTextArr.map((item) => (
+              {Page2NavItemsTextArr.map((item) => (
                 <a>{item.text}</a>
               ))}
             </nav>
