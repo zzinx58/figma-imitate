@@ -1,0 +1,24 @@
+/* @media screen and (1024px <= width) {
+  @scope (.page3-version2) {
+    .header {
+      .logo {
+        @apply;
+        @apply;
+        @apply;
+        @apply;
+      }
+      .nav {
+        @apply;
+        @apply;
+        @apply;
+        @apply;
+      }
+      .menuIcon {
+        @apply;
+        @apply;
+        @apply;
+        @apply;
+      }
+    }
+  }
+} */

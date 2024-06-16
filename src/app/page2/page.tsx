@@ -1,6 +1,10 @@
 import Image from "next/image";
-import { Page2NavItemsTextArr } from "@/app/constants";
+import { Page2NavItemsTextArr } from "@/constants";
 // https://www.figma.com/design/03nwrdmzwdECs70vyWFuvp/Heromaster---Free-collection-of-hero-section-(Community)?node-id=1-346&t=cqDwdR6hZ6RyVWDc-0
+
+export const metadata = useMetadata({
+  title: "Terrible Design",
+});
 
 export default function Page2() {
   return (

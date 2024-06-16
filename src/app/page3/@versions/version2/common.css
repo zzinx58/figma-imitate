@@ -1,0 +1,177 @@
+/* UnoCSS magic not work here. */
+/* @unocss-include */
+/* --uno: bg-red; */
+
+/* 这里的样式会作用于全局 */
+/* .test2 {
+  color: blue;
+} */
+
+/* 相比 @scope,此处优先级更高，但是会样式泄漏，体现为全局样式效果 */
+/* :scope {
+  .test2 {
+    color: red;
+  }
+} */
+
+/* 涉及选择器优先级计算知识点问题 */
+/* .test {
+  color: fuchsia;
+} */
+/* .test2 {
+  color: blue;
+} */
+/* 组合选择器优先级高于 @scope(.test) {.test2} */
+/* .test .test2 {
+  color: red;
+} */
+
+/*@scope (.test) {
+  .test2 {
+    /~ color: green; ~/
+    /~ color: blue; ~/
+    /~ color: red; ~/
+    color: brown;
+  }
+  .test2 {
+    color: red;
+  }
+}*/
+
+/* 样式泄漏问题，所以该组织方式需要项目整体按同一规范，这种方法只是简化了代码管理难度（起名）。 */
+/* .header {
+  @apply bg-red;
+} */
+
+/* @scope (.page3-version2) {
+  .test2 {
+    color: blue;
+  }
+  .header {
+    /~ @apply 2xl:(bg-red h-300px); ~/
+    /~
+    /~ This Part Not Work. ~/
+    --at-apply: bg-yellow;
+    --uno-apply: bg-yellow;
+    --uno: bg-yellow;
+    ~/
+    /~ background-color: red; ~/
+    /~ --uno: does't work ~/
+    /~ --uno: "bg-red"; ~/
+    /~ background: red; ~/
+  }
+}*/
+
+/* ---------------------------------- */
+
+/* 
+  常识：
+  iPhoneSE/8-w:375px
+  sm:640px
+  md:768px
+  lg:1024px
+  xl:1280px
+  2xl:1536px
+*/
+/* Util Styles */
+.page3-version2 {
+  --text-min-ratio: min(100vw/1440, 100vh/868);
+  --text-max-ratio: max(100vw/1440, 100vh/868);
+}
+
+@scope (.page3-version2) {
+  /* Tailwind 上没有找到，但这效果 UnoCSS 有内置？编辑器有提示，但是实际上没有效果，是使用此处的样式 */
+  .text-stroke-white {
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white;
+  }
+}
+
+/* Universe Styles */
+/* Desktop */
+@scope (.page3-version2) {
+  .slogan {
+    @apply text-nowrap px-[calc(20/724*100vh)];
+
+    @media screen and (320px <= width < 1024px) {
+      .slogan-1 {
+        @apply text-[calc(13/724*100vh)] font-light mt-[calc(42/724*100vh)] text-start;
+      }
+      .slogan-2 {
+        @apply text-[calc(39/724*100vh)] font-bold text-#5463FF;
+      }
+      .slogan-3 {
+        @apply text-[calc(10/724*100vh)] font-light text-wrap text-center;
+      }
+      .slogan-button {
+        @apply flex justify-center mt-[calc(18/724*100vh)];
+      }
+      .slogan-data {
+        @apply flex gap-[calc(33/375*100vw)] text-[calc(9/724*100vh)] justify-center mt-[calc(18/724*100vh)];
+        .slogan-data-number {
+          @apply text-#5463FF text-[calc(18/724*100vh)];
+        }
+      }
+    }
+    @media screen and (1024px <= width) {
+      .slogan-1 {
+        @apply row-end-2 self-end text-[calc(24/868*100vh)];
+      }
+      .slogan-2 {
+        @apply row-start-2 text-#5463FF text-[calc(72/868*100vh)] font-bold leading-20;
+      }
+      .slogan-3 {
+        @apply mt-3vh leading-2.5vh text-pretty text-[calc(18/868*100vh)] font-light;
+      }
+      .slogan-button {
+        @apply row-start-5;
+      }
+      .slogan-data {
+        @apply row-start-7 text-[calc(16/868*100vh)] leading-5 flex gap-[calc(40/1440*100vw)];
+        .slogan-data-number {
+          @apply leading-15 text-#5463FF text-[calc(32/868*100vh)];
+        }
+      }
+    }
+  }
+  .header {
+    .menuIcon {
+      @apply hover:cursor-pointer
+      /* 这里不考虑小于 sm 断点的页面呈现了。 */
+      sm:(flex h-40px)
+      lg:(hidden);
+    }
+    .logo {
+      @apply hover:cursor-pointer
+      h-[calc(20/868*100vh*1.5)]
+      lg:(col-span-2);
+    }
+    .nav {
+      @apply flex gap-[calc(40/1440*100vw)]
+      sm:(hidden)
+      lg:(flex col-start-4 text-[calc(16/868*100vh)])
+      xl:(flex col-start-6)
+      2xl:(flex col-start-7);
+
+      a {
+        @apply font-semibold
+        hover:text-#5463FF 
+        hover:cursor-pointer;
+      }
+    }
+    .extraButton {
+      @apply hover:scale-120 
+      w-max px-[calc(100vw/1440*32)] py-[calc(100vh/868*12)]
+      /* py-[calc(12/868*100vh)] = py-[calc(100vh/868*12)] */
+      rounded-10px
+      bg-#5463FF 
+      text-white text-[calc(100vw/1440*16)]
+      
+      sm:(hidden)
+      lg:(flex col-end-13 col-span-2 justify-self-end);
+    }
+  }
+}

@@ -1,7 +1,9 @@
-export const Page2NavItemsTextArr: {
+export type NavItemType = {
   text: string;
-  linkUrl?: string;
-}[] = [
+  link: string;
+};
+export type NavItemArrType = Partial<NavItemType>[];
+export const Page2NavItemsTextArr: Partial<NavItemType>[] = [
   {
     text: "Home",
   },
@@ -18,10 +20,7 @@ export const Page2NavItemsTextArr: {
     text: "Blog",
   },
 ];
-export const Page3NavItemsTextArr: {
-  text: string;
-  linkUrl?: string;
-}[] = [
+export const Page3NavItemsTextArr: Partial<NavItemType>[] = [
   {
     text: "HOME",
   },

@@ -1,0 +1,59 @@
+/* 转用原生 CSS @scope 作用域选择器，此处归档。 */
+
+/* .local-class :global(.text-stroke-white) {
+  color: red;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+} */
+
+/*.local-class {
+  
+  /~ color: white; ~/
+
+  /~ This one not work，使用错误 ~/
+  /~ & :global {
+    .test2 {
+      color: yellow;
+    }
+  } ~/
+
+  /~ This one work ~/
+  /~ & :global(.test2) {
+    color: red;
+  } ~/
+
+  /~ This one not work, 嵌套语法不生效 ~/
+  /~ & > .test2 {
+    color: blue;
+  } ~/
+}*/
+
+/* .test {
+  color: green;
+} */
+/*.test {
+  color: green;
+
+  & :global(.test3) {
+    color: yellowgreen;
+  }
+  & :global(.test2) {
+    color: plum;
+  }
+  /~ below won't work ~/
+  /~ .test2 {
+    color: blueviolet;
+  } ~/
+}*/
+/* @media (min-width: 300px) {
+  .test {
+    color: yellow;
+
+    & :global(.test2) {
+      color: yellowgreen;
+    }
+  }
+} */

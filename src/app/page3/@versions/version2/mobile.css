@@ -1,0 +1,13 @@
+/* @media screen and (320px <= width <= 640px) {
+  @scope (.page3-version2) {
+    .header {
+      .logo {
+        @apply bg-red;
+      }
+      .nav {
+      }
+      .menuIcon {
+      }
+    }
+  }
+} */
