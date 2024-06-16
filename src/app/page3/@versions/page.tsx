@@ -1,6 +1,6 @@
 // 这里涉及样式引入上下文顺序问题，注意！
 import testStyles from "./version2/version2.module.css";
-import "./version2/version2.css";
+import "./version2/common.css";
 
 export default () => {
   return (
