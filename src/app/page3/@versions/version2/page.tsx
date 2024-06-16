@@ -79,7 +79,7 @@ export default () => {
         </div>
         <main
           className="slogan text-stroke-white"
-          un-sm="flex flex-col text-center"
+          un-sm="flex flex-col"
           un-lg="col-start-1 col-span-6 row-start-4 row-end-11 grid grid-rows-subgrid"
         >
           <p className="slogan-1">Yes, I want to do</p>
